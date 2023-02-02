@@ -9,25 +9,26 @@ function App() {
       document.body.classList.add("dark");
     }else {
       document.body.classList.remove("dark");
+      document.body.classList.add("light");
     };
   }, [theme]);
 
-//   useEffect(() => {
-//     localStorage.setItem('items', JSON.stringify(theme));
-//   }, [theme]);
+  useEffect(() => {
+    localStorage.setItem("items", theme);
+  }, [theme]);
 
 
-//   useEffect(() => {
-//   const items = JSON.parse(localStorage.getItem('items'));
-//   if (items) {
-//    setTheme(items);
-//   }
-// }, []);
+  useEffect(() => {
+      let itemsMode = localStorage.getItem("items");
+  if (itemsMode) {
+   setTheme(itemsMode);
+  }
+}, []);
 
   const themesIcon = () => {
     if(theme === 'dark') {
       return (<img src="./images/light-svgrepo-com.svg" alt="switch" className="sun w-[50px] h-[50px] cursor-pointer py-2 bg-transparent dark:bg-white"/>);
-    } else if(!theme) {
+    } else if(theme === 'light') {
       return (
         <img src="./images/dark-mode-night-moon-svgrepo-com.svg" alt="moon" className="moon w-[50px] h-[50px] cursor-pointer border-r-2 bg-white dark:bg-black border-slate-500 py-2"/>
       )
@@ -37,7 +38,7 @@ function App() {
   return (
     <div className="App min-h-screen flex justify-center items-center bg-slate-300 dark:bg-black">      
       <header className="App-header rounded py-12 w-full">
-        <div className="absolute top-8 right-8 flex justify-between border-2 border-slate-500 rounded-md" onClick={() => setTheme(theme === 'dark' ? '' : 'dark')}>
+        <div className="absolute top-8 right-8 flex justify-between border-2 border-slate-500 rounded-md" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
           {themesIcon()}          
         </div>
         <div className="max-w-[500px] mx-auto dark:bg-white bg-black p-4 rounded-2xl text-white dark:text-black">
