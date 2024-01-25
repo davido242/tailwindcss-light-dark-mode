@@ -4,8 +4,6 @@ This is a **react** web app, illustrating the use of **dark and light** theme us
 
 It also persists the *state* from **dark theme** using **localStorage** to hold the selected theme.
 
-## Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -16,7 +14,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 
  `npm run build`
 
