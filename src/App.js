@@ -39,10 +39,10 @@ function App() {
     <div className="App min-h-screen flex justify-center items-center bg-slate-300 dark:bg-black">      
       <header className="App-header rounded py-12 w-full">
         <div className="absolute top-8 right-8 flex justify-between border-2 border-slate-500 rounded-md" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-          {themesIcon()}          
+          {themesIcon()}
         </div>
         <div className="max-w-[500px] mx-auto dark:bg-white bg-black p-4 rounded-2xl text-white dark:text-black">
-          <h1 className="font-bold text-3xl py-4 text-center">Tailwind-React Dark Mode</h1>
+          <h1 className="font-bold text-3xl py-4 text-center">Tailwind-React {theme === "dark" ? "Dark" : "Light"} Mode</h1>
           <p className="">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
