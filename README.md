@@ -2,7 +2,8 @@
 
 This is a **react** web app, illustrating the use of **dark and light** theme using **tailwindcss**,
 
-It also persists the *state* from **dark theme** using **localStorage** to hold the selected theme.
+It also persists the *state* from **dark theme** using **localStorage** to hold the selected theme,
+It toggles with a button for light and dark mode
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
